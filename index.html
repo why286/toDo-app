@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <header>
+        <h1>TO DO LIST</h1>
+      </header>
+
+      <div id="input-container">
+        <label for="task-name">Enter your item:</label><br />
+        <input type="text" id="task-name" placeholder="Enter your item" /><br />
+
+        <label for="task-description">Enter to do description:</label><br />
+        <textarea name="task-description" cols="30" rows="4" placeholder="Enter to do description" id="task-description"></textarea><br />
+
+        <label for="priority">Priority:</label><br />
+        <input type="radio" id="high" name="priority" value="High" />
+        <label for="high">High</label>
+        <input type="radio" id="medium" name="priority" value="Medium" />
+        <label for="medium">Medium</label>
+        <input type="radio" id="low" name="priority" value="Low" />
+        <label for="low">Low</label><br />
+
+        <label for="due-date">Due Date:</label><br />
+        <input type="date" id="due-date" name="due-date"><br />
+
+        <button id="add-todo">Add To Do</button>
+      </div>
+
+      <input type="text" id="search-input" placeholder="Search tasks">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Task list will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </main>
+
+    <script src="./scripts/scripts.js" defer></script>
+  </body>
+</html>
